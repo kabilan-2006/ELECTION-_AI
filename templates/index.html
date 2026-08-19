@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ElectionInfo AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">🗳️</div>
+
+        <div>
+            <h1>ElectionInfo AI</h1>
+            <p>Election Information Assistant</p>
+        </div>
+    </header>
+
+    <!-- Chat Area -->
+    <main id="chatbox" class="chatbox">
+
+        <div class="message bot">
+            <div class="avatar">🤖</div>
+
+            <div class="bubble">
+                <b>Hello! 👋</b>
+                <p>
+                    I am ElectionInfo AI.
+                    Ask me any election-related question.
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Input Area -->
+    <footer class="input-area">
+
+        <input
+            type="text"
+            id="message"
+            placeholder="Ask about elections..."
+            autocomplete="off"
+        >
+
+        <button id="sendBtn" onclick="sendMessage()">
+            Send
+        </button>
+
+    </footer>
+
+    <div class="footer-text">
+        ElectionInfo AI • Powered by Gemini
+    </div>
+
+</div>
+<script type="module"
+src="{{ url_for('static', filename='firebase-config.js') }}"></script>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
